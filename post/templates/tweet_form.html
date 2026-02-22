@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {% if form.instance.pk %}
+    Edit Tweet 
+    {% else %} 
+    Create Tweet 
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<h1 class='text-center text-4xl'>Welcome To TweetSite</h1>
+
+<h2>
+    {% if form.instance.pk %}
+    Edit Tweet 
+    {% else %} 
+    Create Tweet 
+    {% endif %}
+
+
+<form method="post" enctype="multipart/form-data" class="mt-2">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <div class="flex gap-3 mt-4">
+
+        <button type="submit"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">
+            Submit
+        </button>
+
+        <a href="{% url 'tweet_list' %}"
+            class="bg-gray-800 text-white px-4 py-2 rounded border border-gray-600 hover:bg-gray-700">
+            Return
+        </a>
+
+    </div>
+
+</form>
+</h2>
+{% endblock %}
