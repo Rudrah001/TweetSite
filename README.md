@@ -5,6 +5,8 @@ It allows users to create, manage, and share short posts (tweets) with optional 
 
 This project was built to gain hands-on experience with Django’s core features including authentication, CRUD operations, media handling, and template rendering.
 
+![Demo](assets/demo.gif)
+
 ---
 
 ## ✨ Features
