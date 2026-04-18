@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models import Count, Max, Min, Sum, Avg
+from django.utils import timezone
+from datetime import timedelta
 
 # Create your models here.
 class Tweet(models.Model):
